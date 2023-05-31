@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <title>Contcat</title>
+        <link rel="stylesheet" href="contact.css">
+    </head>
+    <body>
+        <div class="head">
+            <h3><a href="home.html">HOME</h3>
+            <h4><a href="shop.html">SHOP</h4>
+            <h4><a href="contact.html">CONTACT US</a></h4>
+            
+        </div>
+       
+            <form>
+                <h1>Contact Us</h1>
+            <table>
+                <tr>
+                    <td><label>Name</label></td>
+                    <td><input type="text" name="name" id="name" placeholder="Enter your name"></td>
+                </tr>
+
+                <tr>
+                    <td><label>Email</label></td>
+                    <td><input type="email" name="email" id="email" placeholder="Enter your Email address"></td>
+                </tr>
+
+                <tr>
+                    <td><label>Phone Number</label></td>
+                    <td><input type="tel" name="tel" id="tel" placeholder="Enter your Phone number"></td>
+                </tr>
+
+                <tr>
+                    <td><label>Details</label></td>
+                    <td><textarea placeholder="Enter your details"></textarea></td>
+                </tr>
+                <tr>
+                <td><input type="submit" value="Submit" onclick="myfun()" class="button"></td>
+                </tr>
+                 </table>
+                 
+            </form>
+       <script>
+            function myfun(){
+                
+                let x= document.getElementById("name").value;
+                if (x==""){
+                    alert("Enter Correct details");
+                }
+
+               
+                
+                let y= document.getElementById("email").value;
+                 var at=y.indexOf("@");  
+                 var dot=y.lastIndexOf(".");  
+                 if (at<1 || dot<at+2 || dot+2>=y.length){  
+                    alert("Please enter a valid e-mail address");  
+   
+                    }  
+                let z= document.getElementById("tel").value;
+                if (z.length<10){
+                    alert("Enter Correct phone number");
+                }
+                }
+        </script> 
+
+    </body>
+    <footer>
+            2022 All rights reserved
+        </footer> 
+</html>
